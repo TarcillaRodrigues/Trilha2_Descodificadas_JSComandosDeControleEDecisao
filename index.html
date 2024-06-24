@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tarefa 14</title>
+</head>
+<body>
+    <main id="container">
+        <div id="calculadora">
+              
+            
+            <div id="input-box">
+                    <div class="input-field">
+                        <label for="n1">Digite um número</label>
+                        <input type="number" id="n1" />
+                    </div>
+                    <div class="input-field">
+                        <label for="n2">Digite um número</label>
+                        <input type="number" id="n2" />
+                    </div>
+                    <div class="input-field">
+                        <label for="n3">Digite um número</label>
+                        <input type="number" id="n3" />
+                    </div>
+                
+
+            </div>
+            <button onclick="calcular()" id="calcular">Calcular</button>
+            
+        </div>
+
+        <div id="calculadora">
+            <div id="idade">
+                <label for="n4">Informe sua idade</label>
+                <input type="number" id="n4">
+            </div>
+
+            <button onclick="obterIdade()">Calcular</button>
+        </div>
+
+        <div id="calculadora">
+            <div id="mes">
+                <label for="n5">Informe o numero do mês</label>
+                <input type="number" id="n5">
+            </div>
+
+            <button onclick="obterMes()">Calcular</button>
+
+        </div>
+
+
+    </main>
+
+    <script>
+        function calcular() {
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+            var n3 = document.getElementById("n3").value;
+
+            var media = (Number(n1) + Number(n2) + Number(n3))/3
+
+            alert(`A média dos valores é: ${media}`);
+
+            
+        } 
+
+        function obterIdade() {
+            var n4 = document.getElementById("n4").value;
+
+            if (n4 >=18) {
+                alert('Você é maior de idade');
+            }else{
+                alert('Você é menor de idade');
+            }
+        }
+
+        function obterMes() {
+            var n5 = document.getElementById("n5").value;
+
+            const meses = [
+                "Janeiro", "Fevreiro", "Março", "Abril", 
+                "Maio","Junho", "Julho", "Agosto",
+                "Setembro", "Outubro", "Novembro", "Dezembro"
+            ]
+
+           if (n5 >=1 && n5 <= 12) {
+            alert("O mês equivalente é: " +meses[n5 - 1]);
+           } else{
+            alert("Numero invalido");
+           }
+        }
+
+        
+    </script>
+</body>
+</html>
