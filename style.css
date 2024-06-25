@@ -8,7 +8,8 @@
 #container{
     width: 100%;
     height: 100vh;
-    display: flex;
+    display: grid;
+    grid-gap: 10px;
     align-items: center;
     justify-content: center;
     background-color: blue;
@@ -17,11 +18,30 @@
 
 #calculadora {
     background-color: rgb(89, 134, 239);
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.300);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.300);
+
+}
+
+/*campo de preenchimento*/
+.input-field input{
+    background-color: white;
+   
+    color: rgb(29, 26, 26);
+    font-size: 10px;
+    padding: 5px;
+
+}
+
+/*Botao*/
+#calcular {
+    background: white;
+    border: none;
+    padding: 4px;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
 }
